@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Function Web Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Multi-Function Web Tool</h1>
+        <div id="input-field">
+            <input type="text" id="valueInput" placeholder="Enter value by selected Function">
+            <select id="select-function">
+                <option value="">Select Function</option>
+                <option value="factorial">Factorial</option>
+                <option value="reverse-word">Reverse Word</option>
+                <option value="uppercase">To Uppercase</option>
+                <option value="loop">Loop Demo</option>
+            </select>
+            <button onclick="processInput()">Submit</button>
+        </div>
+        <div id="output-field"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
