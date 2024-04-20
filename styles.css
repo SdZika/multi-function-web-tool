@@ -4,13 +4,18 @@
 }
 
 .main {
-    max-width: 600px;
+    width: 600px;
+    min-width: 400px;
     height: 300px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
     background-color: azure;
+    flex-direction: column;
+    border: 2px solid rebeccapurple;
 }
+
+
 
 h1 {
     color: rebeccapurple;
@@ -34,10 +39,29 @@ button:hover {
 }
 
 #output-field {
-    height: 100px;
-    width: 420px;
+    
+    width: 76%;
     background-color: white;
     text-align: center;
     margin: 10px auto;
     padding-top: 20px;
+    border: 2px solid rebeccapurple;
+    
+}
+
+@media screen and (max-width: 600px){
+    .input-field {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    input,
+    select,
+    button,
+    .output-field {
+        display: block;
+        width: 76%;
+        margin: 6px auto;
+    }
 }
