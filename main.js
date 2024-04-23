@@ -20,7 +20,8 @@ function processInput (){
         output = "Invalid input";
     }
   
-    document.getElementById('output-field').innerText = output;
+    document.getElementById("output-field").innerText = output;
+    
   }
   
   //factorial function
