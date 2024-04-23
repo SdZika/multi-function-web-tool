@@ -2,6 +2,7 @@ function processInput (){
     let input = document.getElementById("value-input").value;
     let selectFunction = document.getElementById("select-function").value;
     let output;
+    let button = document.getElementById("button");
   
     switch (selectFunction){
       case "factorial":
@@ -21,8 +22,7 @@ function processInput (){
     }
   
     document.getElementById("output-field").innerText = output;
-    
-  }
+   }
   
   //factorial function
   function factorialNumber(num) {
