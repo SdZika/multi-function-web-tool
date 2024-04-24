@@ -48,7 +48,11 @@ function processInput (){
   
   //to upper case
   function makeUpperCase(word){
-    return word.toUpperCase();
+    let myArray = word.split(". ");
+    for (let i = 0; i < myArray.length; i++) {
+        myArray[i] = myArray[i][0].toUpperCase() + myArray[i].slice(1);
+    }
+    return myArray.join(". "); 
   }
   
   
