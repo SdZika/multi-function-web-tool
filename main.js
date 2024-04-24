@@ -2,8 +2,8 @@ function processInput (){
     let input = document.getElementById("value-input").value;
     let selectFunction = document.getElementById("select-function").value;
     let output;
-    let button = document.getElementById("button");
-  
+    //let button = document.getElementById("button");
+    
     switch (selectFunction){
       case "factorial":
         output = factorialNumber(input);
@@ -20,10 +20,14 @@ function processInput (){
       default:
         output = "Invalid input";
     }
-  
-    document.getElementById("output-field").innerText = output;
-   }
-  
+    
+    setTimeout(function() {
+      let outputField = document.getElementById("output-field");
+      outputField.innerText = output;
+      outputField.style.opacity = '1';
+   }, 2000);
+}
+
   //factorial function
   function factorialNumber(num) {
     num = parseInt(num);

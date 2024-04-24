@@ -64,6 +64,8 @@ h1 {
     margin: 10px auto;
     border: 2px solid rebeccapurple;
     overflow: auto;
+    opacity: 0;  /*making unvisible output before trigger*/
+    transition: opacity 1s ease-in-out;
 }
 
 @media screen and (max-width: 600px){
