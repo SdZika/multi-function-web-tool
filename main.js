@@ -2,7 +2,7 @@ function processInput (){
     let input = document.getElementById("value-input").value;
     let selectFunction = document.getElementById("select-function").value;
     let output;
-    //let button = document.getElementById("button");
+    
     
     switch (selectFunction){
       case "factorial":
@@ -28,12 +28,20 @@ function processInput (){
    }, 2000);
 }
 
+button.addEventListener("click", function() {
+  let button = document.getElementById("button");// Disable the button
+  button.disabled = true;
+  button.style.backgroundColor = "red";
+})
+
   //factorial function
   function factorialNumber(num) {
     num = parseInt(num);
-    if (isNaN(num)) return "Invalid input";
-    if (num < 0) return "Cannot calculate factorial of a negative number";
-    if (num === 0 || num === 1) return 1;
+    if (isNaN(num)) {
+       return "invalid input";
+       }
+    if (num < 0) {return "Cannot calculate factorial of a negative number";}
+    if (num === 0 || num === 1) {return 1;}
     let sum = 1;
     for (let i = 1; i <= num; i++) {
       sum = sum * i;
