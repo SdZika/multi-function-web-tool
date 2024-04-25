@@ -34,9 +34,9 @@ button.addEventListener("click", function() {
   button.style.backgroundColor = "red";
 });
 
-let input = document.getElementById("value-input").value; //what to do with this?
-let outputArea = document.getElementById("outputArea");
-document.getElementById("value-input").classList.remove("invalid-input");
+//let input = document.getElementById("value-input").value; //what to do with this?
+//let outputArea = document.getElementById("outputArea");
+//document.getElementById("value-input").classList.remove("invalid-input");
 
   //factorial function
   function factorialNumber(num) {

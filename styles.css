@@ -42,7 +42,7 @@ h1 {
     text-align: center;
 }
 
-.error {
+.invalid-input {
     background-color: red; /* Color for bad input */
   }
 
@@ -74,18 +74,10 @@ h1 {
 
 
 @media screen and (max-width: 600px){
-    .input-field {
+
+    main {
         display: flex;
         flex-direction: column;
-        
     }
-
-    input,
-    select,
-    button,
-    .output-field {
-        display: block;
-        width: 76%;
-        margin: 6px auto;
-    }
+  
 }
