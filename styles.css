@@ -42,6 +42,10 @@ h1 {
     text-align: center;
 }
 
+.error {
+    background-color: red; /* Color for bad input */
+  }
+
 #button {
     padding: 9px 20px;
     background-color: rebeccapurple;

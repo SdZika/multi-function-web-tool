@@ -32,20 +32,31 @@ button.addEventListener("click", function() {
   let button = document.getElementById("button");// Disable the button
   button.disabled = true;
   button.style.backgroundColor = "red";
-})
+});
+
+let input = document.getElementById("value-input").value; //what to do with this?
+let outputArea = document.getElementById("outputArea");
+document.getElementById("value-input").classList.remove("invalid-input");
 
   //factorial function
   function factorialNumber(num) {
+    
     num = parseInt(num);
     if (isNaN(num)) {
+       document.getElementById("value-input").classList.add("invalid-input"); //wont work when its setup here
        return "invalid input";
        }
-    if (num < 0) {return "Cannot calculate factorial of a negative number";}
-    if (num === 0 || num === 1) {return 1;}
+    if (num < 0) {
+      document.getElementById("value-input").classList.add("invalid-input");
+      return "Cannot calculate factorial of a negative number";}
+    if (num === 0 || num === 1) {
+      return 1;
+    }
+    
     let sum = 1;
     for (let i = 1; i <= num; i++) {
-      sum = sum * i;
-    }
+        sum = sum * i;
+      }
     return sum;
   }
   
