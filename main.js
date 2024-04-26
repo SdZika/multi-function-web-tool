@@ -1,8 +1,14 @@
+
+function onChange() {
+  let mySelect = document.getElementById("select-function");
+  let selectedOption = mySelect.options[mySelect.selectedIndex].text;
+  document.getElementById("output-field").innerText = "You selected: " + selectedOption;
+}
+
 function processInput (){
     let input = document.getElementById("value-input").value;
     let selectFunction = document.getElementById("select-function").value;
     let output;
-    
     
     switch (selectFunction){
       case "factorial":
@@ -40,10 +46,10 @@ button.addEventListener("click", function() {
 
   //factorial function
   function factorialNumber(num) {
-    
     num = parseInt(num);
     if (isNaN(num)) {
-       document.getElementById("value-input").classList.add("invalid-input"); //wont work when its setup here
+       let inputArea = document.getElementById("value-input");
+       inputArea.classList.add("invalid-input"); //wont work when its setup here
        return "invalid input";
        }
     if (num < 0) {
@@ -52,7 +58,6 @@ button.addEventListener("click", function() {
     if (num === 0 || num === 1) {
       return 1;
     }
-    
     let sum = 1;
     for (let i = 1; i <= num; i++) {
         sum = sum * i;
@@ -73,8 +78,7 @@ button.addEventListener("click", function() {
     }
     return myArray.join(". "); 
   }
-  
-  
+    
   //loop example
   function squareNumber(num) {
     num = parseInt(num);
@@ -85,5 +89,6 @@ button.addEventListener("click", function() {
     }
     return sequence;
   }
+  
   
   

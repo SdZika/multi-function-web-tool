@@ -34,7 +34,7 @@ h1 {
     justify-content: space-between;
 }
 
-#button,
+#select-function,
 #value-input,
 #button {
     display: block;
@@ -68,16 +68,41 @@ h1 {
     margin: 10px auto;
     border: 2px solid rebeccapurple;
     overflow: auto;
-    opacity: 0;  /*making unvisible output before trigger*/
+    opacity: 50%;  /*making less visible output before trigger*/
     transition: opacity 1s ease-in-out;
 }
 
-
 @media screen and (max-width: 600px){
 
-    main {
+    .main {
+        width: 300px;
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
     }
-  
+
+    h1,
+    #input-field,
+    #output-field {
+    flex: 1;
+    height: 20%;
+    }
+
+    h1 {
+        padding-top: 0px;
+    }
+
+    #input-field {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #select-function,
+    #value-input,
+    #button {
+        width: 100%;
+        text-align: center;
+        margin-top: 2px;
+        
+    }
 }
